@@ -75,36 +75,58 @@
 
 
   <!-- trainer section -->
-
   <html>
-<head>
-    <title>Center Content Example</title>
-    <style>
-        .content {
-            width: 60%; /* Chiều rộng của phần nội dung, điều chỉnh theo nhu cầu */
-            margin: 0 auto; /* Căn giữa nội dung bằng cách tạo khoảng cách tự động hai bên */
-            padding: 20px; /* Khoảng cách bên trong phần tử */
-            background-color: #f0f0f0; /* Màu nền cho phần nội dung */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng, tùy chọn để làm nổi bật */
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Nội dung được căn giữa -->
-    <div class="content">
-        <h1>Tiêu đề của bài văn</h1>
-        <p>
-            Đây là nội dung của bài văn. Nội dung này sẽ được căn giữa trên trang web,
-            với khoảng cách đều hai bên và một số phong cách thêm vào để làm cho nó trông đẹp mắt hơn.
-        </p>
-        <p>
-            Bạn có thể điều chỉnh chiều rộng và các thuộc tính khác trong CSS để phù hợp với thiết kế tổng thể của trang web.
-        </p>
-    </div>
-
-</body>
-</html>
+    <head>
+        <title>Bố cục 2 phần</title>
+        <style>
+            /* Cài đặt CSS cơ bản cho body */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex; /* Sử dụng flexbox để tạo bố cục */
+            }
+    
+            /* Phần dành cho danh mục bài viết */
+            .sidebar {
+                width: 25%; /* Chiếm 25% chiều rộng trang */
+                background-color: #f4f4f4;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+    
+            /* Phần dành cho nội dung bài viết */
+            .content {
+                width: 75%; /* Chiếm 75% chiều rộng trang */
+                padding: 20px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <!-- Danh mục bài viết -->
+        <div class="sidebar">
+            <h2>Danh mục bài viết</h2>
+            <ul>
+                <li><a href="#">Bài viết 1</a></li>
+                <li><a href="#">Bài viết 2</a></li>
+                <li><a href="#">Bài viết 3</a></li>
+                <li><a href="#">Bài viết 4</a></li>
+            </ul>
+        </div>
+    
+        <!-- Nội dung bài viết -->
+        <div class="content">
+            <h2>Nội dung bài viết</h2>
+            <p>
+                Đây là nội dung của bài viết. Bạn có thể thay đổi nội dung này để phù hợp với trang web của mình.
+                Sử dụng các thẻ HTML khác nhau để định dạng và trình bày nội dung bài viết.
+            </p>
+        </div>
+    
+    </body>
+    </html>
   <!-- end trainer section -->
 
   <!-- info section -->
