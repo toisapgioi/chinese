@@ -47,7 +47,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html">Trang chủ <span</a>
                 </li>
                 <li class="nav-item ">
                   <a class="nav-link" href="why.html"> Kỹ năng </a>
@@ -57,7 +57,7 @@
                   <a class="nav-link" href="trainer.html"> Về chúng mình <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html"> Tài liệu</a>
+                  <a class="nav-link" href="contact.html"> Tài liệu </a>
                 </li>
               </ul>
               <div class="user_option">
@@ -315,6 +315,94 @@
 
   <!-- end trainer section -->
 
+  <html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog với Phân Trang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pagination button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nguyễn Mountain's Blog</h1>
+    </header>
+
+    <main id="blog-posts">
+        <!-- Các bài blog sẽ được hiển thị ở đây -->
+    </main>
+
+    <div class="pagination">
+        <button id="prevBtn" onclick="showPage(1)">Trang trước</button>
+        <button id="nextBtn" onclick="showPage(2)">Trang sau</button>
+    </div>
+
+    <script>
+        // Danh sách bài viết
+        const posts = [
+            "Bài viết 1: Lorem ipsum dolor sit amet.",
+            "Bài viết 2: Consectetur adipiscing elit.",
+            "Bài viết 3: Sed do eiusmod tempor incididunt.",
+            "Bài viết 4: Ut labore et dolore magna aliqua.",
+            "Bài viết 5: Ut enim ad minim veniam.",
+            "Bài viết 6: Quis nostrud exercitation ullamco.",
+            "Bài viết 7: Laboris nisi ut aliquip ex ea.",
+            "Bài viết 8: Duis aute irure dolor in reprehenderit.",
+            "Bài viết 9: Excepteur sint occaecat cupidatat non.",
+            "Bài viết 10: Proident, sunt in culpa qui officia."
+        ];
+
+        const postsPerPage = 5; // Số bài viết trên mỗi trang
+        const totalPages = Math.ceil(posts.length / postsPerPage); // Tổng số trang
+
+        function showPage(pageNumber) {
+            const blogPostsContainer = document.getElementById('blog-posts');
+            blogPostsContainer.innerHTML = ''; // Xóa nội dung hiện tại
+
+            // Tính chỉ số bắt đầu và kết thúc cho các bài viết của trang hiện tại
+            const start = (pageNumber - 1) * postsPerPage;
+            const end = start + postsPerPage;
+
+            // Hiển thị các bài viết của trang hiện tại
+            for (let i = start; i < end && i < posts.length; i++) {
+                const post = document.createElement('div');
+                post.classList.add('post');
+                post.textContent = posts[i];
+                blogPostsContainer.appendChild(post);
+            }
+
+            // Cập nhật trạng thái của nút phân trang
+            document.getElementById('prevBtn').style.display = pageNumber === 1 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').style.display = pageNumber === totalPages ? 'none' : 'inline-block';
+        }
+
+        // Hiển thị trang đầu tiên khi tải trang
+        showPage(1);
+    </script>
+
+</body>
+</html>
   <!-- info section -->
   <section class="info_section layout_padding2">
     <div class="container">
